@@ -1,3 +1,21 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*Typography*/
+
+$font-lato: "Lato" , sans-serif;
+
+$font-merriweather: "Merriweather", serif;
+
+
+body {
+    font: $font-merriweather;
+    padding-top: 50px;
+}
+
+.image-box {
+    height: 290px;
+    width: 390px;
+    padding: 20px;
+}

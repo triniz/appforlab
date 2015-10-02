@@ -4,13 +4,14 @@
 
 /*Typography*/
 
-$font-lato: "Lato" , sans-serif;
-
-$font-merriweather: "Merriweather", serif;
-
+.font-lato {
+    font-family : 'Lato', sans-serif;
+}
+.font-merriweather {
+    font-family : 'Merriweather', serif;
+}
 
 body {
-    font: $font-merriweather;
     padding-top: 50px;
 }
 

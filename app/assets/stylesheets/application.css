@@ -14,14 +14,3 @@
  *= require_self
  */
 
-/*Typography*/
-
-$font-lato: "Lato" , sans-serif;
-
-$font-merriweather: "Merriweather", serif;
-
-
-body {
-    font: $font-merriweather;
-    padding-top: 50px;
-}

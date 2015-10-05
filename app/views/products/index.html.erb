@@ -9,22 +9,24 @@
       <th>Description</th>
       <th>Price</th>
       <th>Image url</th>
+      <th>Color</th>
     </tr>
   </thead>
 
-  <tbody>
+  <div class="container" class="table">
     <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.price %></td>
-        <td><%= product.image_url %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <row>
+        <div class="col-md-1"><%= product.name %></div>
+        <div class="col-md-1"><%= product.description %></div>
+        <div class="col-md-1"><%= product.price %></div>
+        <div class="col-md-1"><%= product.image_url %></div>
+        <div class="col-md-1"><%= product.colour %></div>
+        <div class="col-md-1"><%= link_to 'Show', product %></div>
+        <div class="col-md-1"><%= link_to 'Edit', edit_product_path(product) %></div>
+        <div class="col-md-1"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </row>
     <% end %>
-  </tbody>
+  </div>
 </table>
 
 <br>

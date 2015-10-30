@@ -2,33 +2,28 @@
 
 <h3 class="text-uppercase">Listing Products</h3>
 
-<table class="table">
-  <thead>
-    <tr class="info">
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Image url</th>
-      <th>Color</th>
-    </tr>
-  </thead>
-
-  <div class="container" class="table">
+<div class="container-fluid"> 
+    <div class="row">
+        <div class="col-md-1">Name</div>
+        <div class="col-md-5">Description</div>
+        <div class="col-md-1">Price</div>
+        <div class="col-md-1">Image url</div>
+        <div class="col-md-1">Colour</div>
+        <div class="col-md-3">Manage</div>
+    </div>
     <% @products.each do |product| %>
-      <row>
+    <div class="row">
         <div class="col-md-1"><%= product.name %></div>
-        <div class="col-md-1"><%= product.description %></div>
+        <div class="col-md-5"><%= product.description %></div>
         <div class="col-md-1"><%= product.price %></div>
         <div class="col-md-1"><%= product.image_url %></div>
         <div class="col-md-1"><%= product.colour %></div>
         <div class="col-md-1"><%= link_to 'Show', product %></div>
         <div class="col-md-1"><%= link_to 'Edit', edit_product_path(product) %></div>
         <div class="col-md-1"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-      </row>
-    <% end %>
-  </div>
-</table>
+   </div>
+   <% end %>
+</div>
 
 <br>
-
 <%= link_to 'New Product', new_product_path %>

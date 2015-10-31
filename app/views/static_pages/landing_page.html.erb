@@ -1,2 +1,20 @@
-<h2>Featured Product:</h2>
-<%= @featured_product.name %>
+<div class="container">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="Carousel" data-slide-to="0" class="active"></li>
+            <li data-target="Carousel" data-slide-to="1"></li>
+            <li data-target="Carousel" data-slide-to="2"></li>
+        </ol>
+    <!-- Wrapper for slides -->
+        <div class="carousel-inner"role="listbox">
+            <% @products.each do |product| %>
+            <div class="item<%= " active" if product == @products.first %>">
+                <%= image_tag(product.image_url) %>
+                <div class="carousel-caption">
+                    <h1><%= product.name %></h1> 
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>    
+</div>

@@ -12,16 +12,7 @@
         <div class="col-md-3">Manage</div>
     </div>
     <% @products.each do |product| %>
-    <div class="row">
-        <div class="col-md-1"><%= product.name %></div>
-        <div class="col-md-5"><%= product.description %></div>
-        <div class="col-md-1"><%= product.price %></div>
-        <div class="col-md-1"><%= product.image_url %></div>
-        <div class="col-md-1"><%= product.colour %></div>
-        <div class="col-md-1"><%= link_to 'Show', product %></div>
-        <div class="col-md-1"><%= link_to 'Edit', edit_product_path(product) %></div>
-        <div class="col-md-1"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-   </div>
+        <%= render partial: "product", locals: {product: product} %>
    <% end %>
 </div>
 
